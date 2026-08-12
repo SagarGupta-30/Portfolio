@@ -46,7 +46,7 @@ Designed with Apple, Vercel, Linear, and Framer aesthetics, featuring Three.js W
 
 ---
 
-## 🚀 One-Click Deployment Instructions
+## One-Click Deployment Instructions
 
 ### Deploying on Vercel
 1. Install Vercel CLI or import repository to Vercel Dashboard:
