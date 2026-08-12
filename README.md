@@ -1,4 +1,4 @@
-# Sagar Gupta - Award-Winning 3D WebGL Portfolio
+# Sagar Gupta -" Portfolio "
 
 A dark futuristic, award-winning 3D portfolio website built for **Sagar Gupta** (Java Backend Developer, Spring Boot Architect, Open Source Contributor, and Google Student Ambassador 2026).
 
