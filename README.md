@@ -37,8 +37,8 @@ Designed with Apple, Vercel, Linear, and Framer aesthetics, featuring Three.js W
 │   │   ├── gsa-badge.svg       # Google Student Ambassador 2026 badge
 │   │   ├── gsoc-badge.svg      # GirlScript Summer of Code badge
 │   │   ├── ibm-badge.svg       # IBM Certified Backend Developer badge
+│   │   ├── resume.png          # Sagar Gupta Resume image
 │   │   └── favicon.svg         # SG monogram cyberpunk favicon
-│   └── resume.pdf              # Downloadable Sagar Gupta resume
 ├── robots.txt                  # Search engine permissions
 ├── sitemap.xml                 # XML Sitemap for indexing
 └── README.md                   # Project documentation & deployment guide
