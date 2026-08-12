@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="gsaGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4285F4"/>
+      <stop offset="33%" stop-color="#EA4335"/>
+      <stop offset="66%" stop-color="#FBBC05"/>
+      <stop offset="100%" stop-color="#34A853"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="#0A0F2D" stroke="url(#gsaGrad)" stroke-width="4"/>
+  <circle cx="100" cy="100" r="75" fill="none" stroke="#4F8CFF" stroke-width="1" stroke-dasharray="4 4" opacity="0.5"/>
+  <path d="M100 45 L115 75 L148 80 L124 103 L130 135 L100 120 L70 135 L76 103 L52 80 L85 75 Z" fill="url(#gsaGrad)"/>
+  <text x="100" y="160" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">GOOGLE AMBASSADOR</text>
+  <text x="100" y="175" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="10" fill="#00F5FF" text-anchor="middle">2026 COHORT</text>
+</svg>

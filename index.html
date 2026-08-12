@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <!-- Primary Meta Tags -->
+  <title>Sagar Gupta | Java Backend Developer & Spring Boot Architect</title>
+  <meta name="title" content="Sagar Gupta | Java Backend Developer & Spring Boot Architect" />
+  <meta name="description" content="Portfolio of Sagar Gupta - Java Backend Developer, Spring Boot Architect, Open Source Contributor, and Google Student Ambassador 2026. Specializing in high-performance microservices, cloud backend, and distributed systems." />
+  <meta name="keywords" content="Sagar Gupta, Java Developer, Spring Boot, Microservices, Google Student Ambassador, Backend Engineer, Open Source, Portfolio" />
+  <meta name="author" content="Sagar Gupta" />
+  <link rel="canonical" href="https://sagargupta.dev/" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg" />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://sagargupta.dev/" />
+  <meta property="og:title" content="Sagar Gupta | Java Backend Developer & Spring Boot Architect" />
+  <meta property="og:description" content="Futuristic 3D portfolio of Sagar Gupta. Google Student Ambassador 2026 & Spring Boot Microservices Architect." />
+  <meta property="og:image" content="assets/images/project-portfolio.png" />
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://sagargupta.dev/" />
+  <meta property="twitter:title" content="Sagar Gupta | Java Backend Developer & Spring Boot Architect" />
+  <meta property="twitter:description" content="Futuristic 3D portfolio of Sagar Gupta. Google Student Ambassador 2026 & Spring Boot Microservices Architect." />
+  <meta property="twitter:image" content="assets/images/project-portfolio.png" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Sora:wght@400;600;700&family=Space+Grotesk:wght@400;600;700;800&display=swap" rel="stylesheet" />
+
+  <!-- Remix Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Schema.org JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Sagar Gupta",
+    "url": "https://sagargupta.dev",
+    "image": "assets/images/profile.png",
+    "sameAs": [
+      "https://github.com/SagarGupta-30",
+      "https://linkedin.com/in/sagargupta"
+    ],
+    "jobTitle": "Java Backend Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Google Student Ambassador Program 2026"
+    },
+    "knowsAbout": ["Java", "Spring Boot", "Microservices", "PostgreSQL", "Docker", "Kubernetes", "Kafka", "Cloud Architecture"]
+  }
+  </script>
+</head>
+
+<body>
+
+  <!-- Background Ambient Aurora Glows -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- 3D Three.js WebGL Canvas -->
+  <canvas id="bg"></canvas>
+
+  <!-- ================= PRELOADER ================= -->
+  <div id="loader">
+    <div class="loader-content">
+      <div class="loader-logo">SAGAR GUPTA</div>
+      <div class="loader-bar-container">
+        <div class="loader-progress"></div>
+      </div>
+      <div class="loader-text">INITIALIZING ENGINE...</div>
+    </div>
+  </div>
+
+  <!-- ================= CUSTOM DUAL CURSOR ================= -->
+  <div class="cursor"></div>
+  <div class="cursor2"></div>
+
+  <!-- ================= NAVBAR ================= -->
+  <header>
+    <nav class="navbar">
+      <a href="#home" class="logo">
+        <div class="logo-badge">SG</div>
+        <span>SAGAR</span>
+      </a>
+
+      <ul class="nav-links">
+        <li><a href="#home" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#github">GitHub</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-cta">
+        <a href="#contact" class="btn-glass">
+          <span>Let's Talk</span>
+          <i class="ri-arrow-right-line"></i>
+        </a>
+        <div class="menu-toggle">
+          <i class="ri-menu-3-line"></i>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <div class="status-badge">
+          <span class="status-dot"></span>
+          <span>Open for Backend & Engineering Roles</span>
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm <span class="gradient-text">Sagar Gupta</span>
+        </h1>
+
+        <div class="hero-role-wrapper">
+          <span id="typing-role">Java Backend Developer</span>
+          <span class="typing-cursor"></span>
+        </div>
+
+        <p class="hero-description">
+          Architecting high-throughput microservices, scalable cloud backend infrastructure, and resilient distributed systems with Java & Spring Boot. Google Student Ambassador 2026.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn-primary">
+            <span>Explore Works</span>
+            <i class="ri-code-s-slash-line"></i>
+          </a>
+          <a href="assets/resume.pdf" download="Sagar_Gupta_Resume.pdf" class="btn-secondary">
+            <span>Download Resume</span>
+            <i class="ri-download-2-line"></i>
+          </a>
+        </div>
+
+        <div class="hero-socials">
+          <a href="https://github.com/SagarGupta-30" target="_blank" rel="noopener" class="social-icon" aria-label="GitHub">
+            <i class="ri-github-fill"></i>
+          </a>
+          <a href="https://linkedin.com/in/sagargupta" target="_blank" rel="noopener" class="social-icon" aria-label="LinkedIn">
+            <i class="ri-linkedin-fill"></i>
+          </a>
+          <a href="https://leetcode.com" target="_blank" rel="noopener" class="social-icon" aria-label="LeetCode">
+            <i class="ri-code-box-line"></i>
+          </a>
+          <a href="mailto:sagar.gupta.dev@example.com" class="social-icon" aria-label="Email">
+            <i class="ri-mail-line"></i>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="hero-avatar-card">
+          <img src="assets/images/profile.png" alt="Sagar Gupta Profile" class="hero-avatar-img" />
+
+          <!-- Floating Badges -->
+          <div class="hero-floating-tag tag-1">
+            <div class="tag-icon"><i class="ri-award-fill"></i></div>
+            <div>
+              <div class="tag-title">Google Ambassador</div>
+              <div class="tag-subtitle">2026 Cohort</div>
+            </div>
+          </div>
+
+          <div class="hero-floating-tag tag-2">
+            <div class="tag-icon"><i class="ri-cup-fill"></i></div>
+            <div>
+              <div class="tag-title">Spring Boot</div>
+              <div class="tag-subtitle">Microservices Lead</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ABOUT SECTION ================= -->
+    <section id="about" class="about">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-user-3-line"></i> ABOUT ME
+        </div>
+        <h2 class="section-title">Backend Architecture & Passion</h2>
+        <p class="section-subtitle">
+          Building resilient systems that power modern digital experiences with extreme reliability and speed.
+        </p>
+      </div>
+
+      <div class="about-grid">
+        <div class="about-card-glass">
+          <p class="about-text">
+            I am a Computer Science Engineering student and passionate Java Backend Engineer driven by high-scale systems architecture. As a <strong>Google Student Ambassador 2026</strong>, I advocate for developer growth, cloud computing, and community innovation.
+          </p>
+          <p class="about-text">
+            My core strength lies in translating complex business domain models into efficient, containerized microservices architectures using Spring Boot, Spring Cloud, Kafka, and relational/NoSQL datastores.
+          </p>
+
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="ri-cpu-line"></i></div>
+              <div class="highlight-content">
+                <h4>Distributed Systems & Cloud</h4>
+                <p>Designing event-driven messaging and RESTful APIs optimized for low-latency workloads.</p>
+              </div>
+            </div>
+            <div class="highlight-item">
+              <div class="highlight-icon"><i class="ri-git-branch-line"></i></div>
+              <div class="highlight-content">
+                <h4>Open Source Contributor</h4>
+                <p>Active participant in GirlScript Summer of Code and open-source backend ecosystems.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="about-stats-grid">
+          <div class="stat-card">
+            <div class="stat-number counter" data-target="15">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number counter" data-target="1000">0</div>
+            <div class="stat-label">GitHub Commits</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number counter" data-target="500">0</div>
+            <div class="stat-label">LeetCode Problems</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">99.9%</div>
+            <div class="stat-label">Uptime Mindset</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS SECTION ================= -->
+    <section id="skills" class="skills">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-tools-line"></i> MY TECH STACK
+        </div>
+        <h2 class="section-title">Engineered For Performance</h2>
+        <p class="section-subtitle">
+          Mastering backend frameworks, distributed databases, cloud tools, and modern web standards.
+        </p>
+      </div>
+
+      <div class="skills-tabs">
+        <button class="tab-btn active" data-filter="all">All Skills</button>
+        <button class="tab-btn" data-filter="backend">Backend</button>
+        <button class="tab-btn" data-filter="database">Database</button>
+        <button class="tab-btn" data-filter="cloud">Cloud & DevOps</button>
+        <button class="tab-btn" data-filter="tools">Tools & Architecture</button>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Java -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-code-s-slash-fill"></i></div>
+            <div class="skill-info">
+              <h3>Core & Enterprise Java</h3>
+              <span>OOP, Multithreading, JVM</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="95"></div>
+          </div>
+        </div>
+
+        <!-- Spring Boot -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-leaf-fill"></i></div>
+            <div class="skill-info">
+              <h3>Spring Boot & Spring Cloud</h3>
+              <span>Microservices, Security, JPA</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+
+        <!-- REST & Microservices -->
+        <div class="skill-card" data-category="backend">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-server-fill"></i></div>
+            <div class="skill-info">
+              <h3>RESTful APIs & GraphQL</h3>
+              <span>API Gateway, Swagger, OAuth2</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="92"></div>
+          </div>
+        </div>
+
+        <!-- PostgreSQL & MySQL -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-database-2-fill"></i></div>
+            <div class="skill-info">
+              <h3>PostgreSQL & MySQL</h3>
+              <span>Relational Schema, Indexing</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="88"></div>
+          </div>
+        </div>
+
+        <!-- Redis Caching -->
+        <div class="skill-card" data-category="database">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-flashlight-fill"></i></div>
+            <div class="skill-info">
+              <h3>Redis Caching</h3>
+              <span>In-Memory Data, Pub/Sub</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="85"></div>
+          </div>
+        </div>
+
+        <!-- Docker & Kubernetes -->
+        <div class="skill-card" data-category="cloud">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-box-3-fill"></i></div>
+            <div class="skill-info">
+              <h3>Docker & Containerization</h3>
+              <span>Docker Compose, Deployments</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="82"></div>
+          </div>
+        </div>
+
+        <!-- Apache Kafka -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-loop-left-fill"></i></div>
+            <div class="skill-info">
+              <h3>Apache Kafka & RabbitMQ</h3>
+              <span>Event Streams, Messaging Queue</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="80"></div>
+          </div>
+        </div>
+
+        <!-- Git & CI/CD -->
+        <div class="skill-card" data-category="tools">
+          <div class="skill-header">
+            <div class="skill-icon"><i class="ri-git-merge-fill"></i></div>
+            <div class="skill-info">
+              <h3>Git, GitHub Actions & CI/CD</h3>
+              <span>Version Control, Automated Pipelines</span>
+            </div>
+          </div>
+          <div class="skill-bar-bg">
+            <div class="skill-bar-fill" data-width="90"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIENCE SECTION ================= -->
+    <section id="experience" class="experience">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-briefcase-line"></i> CAREER TIMELINE
+        </div>
+        <h2 class="section-title">Leadership & Development</h2>
+        <p class="section-subtitle">
+          Leading developer programs, driving open-source codebases, and crafting enterprise software.
+        </p>
+      </div>
+
+      <div class="timeline">
+        <!-- Item 1 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2026 - PRESENT</span>
+            <h3 class="timeline-title">Google Student Ambassador</h3>
+            <div class="timeline-company">Google Developer Groups & Campus Tech</div>
+            <p class="timeline-desc">
+              Organizing Google Cloud workshops, mentoring student developers in backend software development, and hosting campus hackathons.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 2 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2024 - PRESENT</span>
+            <h3 class="timeline-title">Open Source Contributor</h3>
+            <div class="timeline-company">GirlScript Summer of Code</div>
+            <p class="timeline-desc">
+              Contributed high-impact PRs to Java & Spring Boot repositories, optimized database query execution by 35%, and mentored junior contributors.
+            </p>
+          </div>
+        </div>
+
+        <!-- Item 3 -->
+        <div class="timeline-item">
+          <div class="timeline-dot"></div>
+          <div class="timeline-card">
+            <span class="timeline-date">2023 - 2024</span>
+            <h3 class="timeline-title">Backend Software Engineering Lead</h3>
+            <div class="timeline-company">Campus Tech Solutions & Projects</div>
+            <p class="timeline-desc">
+              Architected RESTful microservices for student portals, implemented Spring Security OAuth2 JWT authentication, and reduced server response latency.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJECTS SHOWCASE ================= -->
+    <section id="projects" class="projects">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-folders-line"></i> FEATURED PROJECTS
+        </div>
+        <h2 class="section-title">Crafted Software Systems</h2>
+        <p class="section-subtitle">
+          Production-grade applications built with precision, scale, and modern UX aesthetics.
+        </p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/project-elevatecv.png" alt="ElevateCV AI" class="project-img" />
+            <div class="project-overlay"></div>
+            <span class="project-badge">AI & Spring Boot</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">ElevateCV AI</h3>
+            <p class="project-desc">
+              AI-driven resume builder and real-time ATS optimization platform. Built with Spring Boot backend, OpenAI API parsing, PostgreSQL datastore, and dynamic score algorithms.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Spring Boot</span>
+              <span class="tech-tag">Java 17</span>
+              <span class="tech-tag">OpenAI API</span>
+              <span class="tech-tag">PostgreSQL</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SagarGupta-30" target="_blank" rel="noopener" class="project-btn btn-github">
+                <i class="ri-github-line"></i> GitHub
+              </a>
+              <a href="#" class="project-btn btn-demo">
+                <i class="ri-external-link-line"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/project-soulsync.png" alt="SoulSync Collaborative Workspace" class="project-img" />
+            <div class="project-overlay"></div>
+            <span class="project-badge">Real-Time WebSockets</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">SoulSync Workspace</h3>
+            <p class="project-desc">
+              Real-time collaboration platform featuring WebSocket messaging, Spring Boot backend telemetry, Redis Pub/Sub event broadcasting, and secure JWT session controls.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Java</span>
+              <span class="tech-tag">WebSockets</span>
+              <span class="tech-tag">Redis Pub/Sub</span>
+              <span class="tech-tag">Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SagarGupta-30" target="_blank" rel="noopener" class="project-btn btn-github">
+                <i class="ri-github-line"></i> GitHub
+              </a>
+              <a href="#" class="project-btn btn-demo">
+                <i class="ri-external-link-line"></i> Live Demo
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="project-card">
+          <div class="project-img-wrapper">
+            <img src="assets/images/project-banking.png" alt="Distributed Banking Microservices Engine" class="project-img" />
+            <div class="project-overlay"></div>
+            <span class="project-badge">Microservices</span>
+          </div>
+          <div class="project-body">
+            <h3 class="project-title">Banking Payment Engine</h3>
+            <p class="project-desc">
+              High-throughput banking backend with Spring Cloud API Gateway, Apache Kafka event streaming, distributed transaction Saga patterns, and Docker orchestration.
+            </p>
+            <div class="project-tech">
+              <span class="tech-tag">Spring Cloud</span>
+              <span class="tech-tag">Kafka</span>
+              <span class="tech-tag">Microservices</span>
+              <span class="tech-tag">Kubernetes</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/SagarGupta-30" target="_blank" rel="noopener" class="project-btn btn-github">
+                <i class="ri-github-line"></i> GitHub
+              </a>
+              <a href="#" class="project-btn btn-demo">
+                <i class="ri-external-link-line"></i> Architecture
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= ACHIEVEMENTS ================= -->
+    <section id="achievements" class="achievements">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-trophy-line"></i> HONORS & CERTIFICATIONS
+        </div>
+        <h2 class="section-title">Recognitions & Badges</h2>
+        <p class="section-subtitle">
+          Acknowledged by global tech programs, open-source communities, and industry leaders.
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card">
+          <img src="assets/images/gsa-badge.svg" alt="Google Student Ambassador 2026 Badge" class="achievement-badge-img" />
+          <h3 class="achievement-title">Google Student Ambassador</h3>
+          <div class="achievement-org">Google 2026 Cohort</div>
+          <p class="achievement-desc">Selected to lead Google Cloud & developer initiatives on campus.</p>
+        </div>
+
+        <div class="achievement-card">
+          <img src="assets/images/gsoc-badge.svg" alt="GirlScript OSS Contributor Badge" class="achievement-badge-img" />
+          <h3 class="achievement-title">Top Contributor</h3>
+          <div class="achievement-org">GirlScript Summer of Code</div>
+          <p class="achievement-desc">Recognized among top contributors for backend pull requests.</p>
+        </div>
+
+        <div class="achievement-card">
+          <img src="assets/images/ibm-badge.svg" alt="IBM Certified Backend Developer" class="achievement-badge-img" />
+          <h3 class="achievement-title">IBM Certified Developer</h3>
+          <div class="achievement-org">IBM Backend Certification</div>
+          <p class="achievement-desc">Certified in Enterprise Application Development with Java & Cloud.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= GITHUB LIVE INTEGRATION ================= -->
+    <section id="github" class="github">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-git-repository-line"></i> OPEN SOURCE ACTIVITY
+        </div>
+        <h2 class="section-title">GitHub Profile Stats</h2>
+        <p class="section-subtitle">
+          Live statistics automatically fetched from my GitHub profile <strong>@SagarGupta-30</strong>.
+        </p>
+      </div>
+
+      <div class="github-container">
+        <div class="github-user-header">
+          <div class="user-meta">
+            <img src="assets/images/profile.png" id="gh-avatar" alt="Sagar Gupta GitHub Avatar" class="gh-avatar" />
+            <div class="gh-info">
+              <h3>Sagar Gupta (@SagarGupta-30)</h3>
+              <p>Java Backend Developer | Spring Boot Specialist</p>
+            </div>
+          </div>
+
+          <div class="gh-stats-counts">
+            <div class="gh-stat-box">
+              <div class="gh-stat-val" id="gh-repos-count">24</div>
+              <div class="gh-stat-lbl">Public Repos</div>
+            </div>
+            <div class="gh-stat-box">
+              <div class="gh-stat-val" id="gh-followers-count">150+</div>
+              <div class="gh-stat-lbl">Followers</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="github-repos-grid" id="github-repos-grid">
+          <!-- Dynamically populated or rendered -->
+          <div class="repo-card">
+            <div class="repo-top">
+              <span class="repo-name"><i class="ri-git-repository-line"></i> ElevateCV-AI-Backend</span>
+              <span class="tech-tag">Java</span>
+            </div>
+            <p class="repo-desc">Spring Boot backend microservice engine for resume analysis and ATS scoring.</p>
+            <div class="repo-footer">
+              <span><i class="ri-star-line"></i> 48</span>
+              <span><i class="ri-git-fork-line"></i> 14</span>
+            </div>
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-top">
+              <span class="repo-name"><i class="ri-git-repository-line"></i> SoulSync-WebSockets</span>
+              <span class="tech-tag">Java</span>
+            </div>
+            <p class="repo-desc">Real-time collaboration broker with Spring WebSockets and Redis pub-sub.</p>
+            <div class="repo-footer">
+              <span><i class="ri-star-line"></i> 32</span>
+              <span><i class="ri-git-fork-line"></i> 9</span>
+            </div>
+          </div>
+
+          <div class="repo-card">
+            <div class="repo-top">
+              <span class="repo-name"><i class="ri-git-repository-line"></i> Banking-Microservices-Saga</span>
+              <span class="tech-tag">Java</span>
+            </div>
+            <p class="repo-desc">Event-driven payment processing engine built with Kafka and Spring Cloud.</p>
+            <div class="repo-footer">
+              <span><i class="ri-star-line"></i> 65</span>
+              <span><i class="ri-git-fork-line"></i> 21</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= CONTACT SECTION ================= -->
+    <section id="contact" class="contact">
+      <div class="section-header">
+        <div class="section-tag">
+          <i class="ri-mail-send-line"></i> GET IN TOUCH
+        </div>
+        <h2 class="section-title">Let's Build Something Great</h2>
+        <p class="section-subtitle">
+          Have a backend role, open-source project, or architectural challenge? Drop a message!
+        </p>
+      </div>
+
+      <div class="contact-container">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ri-mail-line"></i></div>
+            <div class="contact-detail">
+              <h4>Email</h4>
+              <p>sagar.gupta.dev@example.com</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ri-linkedin-fill"></i></div>
+            <div class="contact-detail">
+              <h4>LinkedIn</h4>
+              <p>linkedin.com/in/sagargupta</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ri-github-fill"></i></div>
+            <div class="contact-detail">
+              <h4>GitHub</h4>
+              <p>github.com/SagarGupta-30</p>
+            </div>
+          </div>
+
+          <div class="contact-item">
+            <div class="contact-icon"><i class="ri-map-pin-line"></i></div>
+            <div class="contact-detail">
+              <h4>Location</h4>
+              <p>India (Available Globally & Remote)</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="contact-form-glass">
+          <form id="contact-form">
+            <div class="form-group">
+              <label for="form-name">Your Name</label>
+              <input type="text" id="form-name" class="form-control" placeholder="John Doe" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-email">Your Email</label>
+              <input type="email" id="form-email" class="form-control" placeholder="john@example.com" required />
+            </div>
+
+            <div class="form-group">
+              <label for="form-message">Your Message</label>
+              <textarea id="form-message" class="form-control" placeholder="Hi Sagar, I'd like to discuss a Java Backend Engineering role..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary" style="width: 100%; justify-content: center;">
+              <span>Send Message</span>
+              <i class="ri-send-plane-fill"></i>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ================= FOOTER ================= -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-brand">
+        <h3>SAGAR GUPTA</h3>
+        <p>Java Backend Developer | Spring Boot Architect | Google Student Ambassador 2026</p>
+      </div>
+
+      <button id="scrollTop" class="scroll-top-btn" aria-label="Back to top">
+        <i class="ri-arrow-up-line"></i>
+      </button>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Sagar Gupta. All rights reserved. Built with Three.js & GSAP.</p>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div id="toast" class="toast-notification">
+    <i class="ri-checkbox-circle-fill" style="color: var(--accent); font-size: 1.25rem;"></i>
+    <span class="toast-text">Message Sent Successfully!</span>
+  </div>
+
+  <!-- CDN Scripts -->
+  <!-- Three.js Library -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+  <!-- GSAP & ScrollTrigger -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Custom Scripts -->
+  <script src="js/particles.js"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

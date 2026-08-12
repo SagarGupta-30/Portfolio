@@ -1,0 +1,181 @@
+/* ==========================================================================
+   SAGAR GUPTA PORTFOLIO - RESPONSIVE STYLESHEET
+   Breakpoints: 1200px (Desktop), 992px (Laptop/Tablet), 768px (Mobile), 480px (Small Mobile)
+   ========================================================================== */
+
+/* Large Screens & Laptops */
+@media (max-width: 1200px) {
+  .hero-title {
+    font-size: 3.8rem;
+  }
+  .hero-avatar-card {
+    width: 320px;
+    height: 400px;
+  }
+  .tag-1 { left: -10px; }
+  .tag-2 { right: -10px; }
+}
+
+/* Tablets & Medium Displays */
+@media (max-width: 992px) {
+  header {
+    padding: 1rem;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 80%;
+    max-width: 400px;
+    height: 100vh;
+    background: rgba(5, 8, 22, 0.98);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    flex-direction: column;
+    justify-content: center;
+    gap: 2.5rem;
+    padding: 3rem;
+    transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 999;
+    border-left: 1px solid var(--glass-border);
+  }
+
+  .nav-links.active {
+    right: 0;
+  }
+
+  .menu-toggle {
+    display: block;
+    z-index: 1000;
+  }
+
+  .hero {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding-top: 8rem;
+    gap: 4rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+
+  .hero-actions,
+  .hero-socials {
+    justify-content: center;
+  }
+
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .contact-container {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item {
+    width: 100%;
+    padding-left: 3.5rem;
+    padding-right: 0;
+    text-align: left !important;
+  }
+
+  .timeline-item:nth-child(even) {
+    left: 0;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 11px;
+  }
+}
+
+/* Mobile Devices */
+@media (max-width: 768px) {
+  section {
+    padding: 5rem 1.25rem 2.5rem;
+  }
+
+  .section-title {
+    font-size: 2.25rem;
+  }
+
+  .hero-title {
+    font-size: 2.8rem;
+  }
+
+  .hero-role-wrapper {
+    font-size: 1.2rem;
+    justify-content: center;
+  }
+
+  .hero-avatar-card {
+    width: 280px;
+    height: 350px;
+  }
+
+  .tag-1, .tag-2 {
+    display: none; /* Hide floating badges on smaller screens for clean UI */
+  }
+
+  .stat-card {
+    padding: 1.5rem 1rem;
+  }
+
+  .stat-number {
+    font-size: 2.5rem;
+  }
+
+  .about-card-glass,
+  .contact-form-glass,
+  .github-container {
+    padding: 1.75rem;
+    border-radius: 20px;
+  }
+
+  .github-user-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.3rem;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .btn-primary, .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .about-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}

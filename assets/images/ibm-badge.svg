@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <linearGradient id="ibmGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#052FAD"/>
+      <stop offset="100%" stop-color="#00D2FF"/>
+    </linearGradient>
+  </defs>
+  <circle cx="100" cy="100" r="90" fill="#0A0F2D" stroke="url(#ibmGrad)" stroke-width="4"/>
+  <rect x="55" y="70" width="90" height="10" fill="#00D2FF"/>
+  <rect x="55" y="85" width="90" height="10" fill="#00D2FF"/>
+  <rect x="55" y="100" width="90" height="10" fill="#00D2FF"/>
+  <text x="100" y="155" font-family="'Space Grotesk', sans-serif" font-weight="700" font-size="12" fill="#FFFFFF" text-anchor="middle" letter-spacing="1">IBM CERTIFIED</text>
+  <text x="100" y="172" font-family="'Space Grotesk', sans-serif" font-weight="600" font-size="10" fill="#4F8CFF" text-anchor="middle">BACKEND DEVELOPER</text>
+</svg>
