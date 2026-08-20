@@ -4,7 +4,7 @@ A dark futuristic, award-winning 3D portfolio website built for **Sagar Gupta** 
 
 Designed with Apple, Vercel, Linear, and Framer aesthetics, featuring Three.js WebGL background effects, GSAP ScrollTrigger animations, CSS glassmorphism, dynamic GitHub profile integration, and responsive micro-interactions.
 
----
+---------------------------
 
 ## 🌟 Key Features
 
