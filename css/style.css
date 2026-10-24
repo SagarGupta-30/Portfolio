@@ -1110,7 +1110,8 @@ section {
 .project-links {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  flex-wrap: wrap;
+  gap: 0.75rem;
 }
 
 .project-btn {
@@ -1497,3 +1498,407 @@ footer {
   border-top: 1px solid rgba(255, 255, 255, 0.05);
   padding-top: 2rem;
 }
+
+/* ================= CREATIVE WORK & VISUAL DESIGN GALLERY ================= */
+.gallery-tabs {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-bottom: 3rem;
+}
+
+.gallery-tab {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid var(--glass-border);
+  color: var(--text-muted);
+  padding: 0.6rem 1.25rem;
+  border-radius: 100px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.gallery-tab:hover {
+  color: #fff;
+  border-color: var(--primary);
+  background: rgba(79, 140, 255, 0.08);
+}
+
+.gallery-tab.active {
+  background: var(--primary);
+  color: #fff;
+  border-color: var(--primary);
+  box-shadow: 0 0 20px rgba(79, 140, 255, 0.4);
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.gallery-item {
+  background: var(--bg-card);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.gallery-item:hover {
+  transform: translateY(-8px);
+  border-color: rgba(0, 245, 255, 0.35);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(79, 140, 255, 0.2);
+}
+
+.gallery-img-wrapper {
+  position: relative;
+  height: 240px;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.gallery-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gallery-item:hover .gallery-img {
+  transform: scale(1.06);
+}
+
+.gallery-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 8, 22, 0.2) 0%, rgba(5, 8, 22, 0.85) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+  opacity: 1;
+}
+
+.gallery-expand-btn {
+  background: rgba(0, 245, 255, 0.2);
+  border: 1px solid var(--accent);
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+  transform: translateY(10px);
+  transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-expand-btn {
+  transform: translateY(0);
+}
+
+.gallery-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  padding: 0.35rem 0.85rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: rgba(5, 8, 22, 0.85);
+  border: 1px solid var(--glass-border);
+  color: var(--accent);
+  backdrop-filter: blur(12px);
+  z-index: 2;
+}
+
+.gallery-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.gallery-category {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 0.4rem;
+}
+
+.gallery-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 0.75rem;
+  line-height: 1.35;
+}
+
+.gallery-desc {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  flex-grow: 1;
+}
+
+.gallery-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1.25rem;
+}
+
+.gallery-tag {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.75rem;
+  color: var(--text-subtle);
+}
+
+.gallery-footer-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.gallery-view-btn {
+  color: var(--accent);
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.gallery-view-btn:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+/* ================= FEATURED HEALTHCARE CONCEPT SPOTLIGHT ================= */
+.healthcare-spotlight {
+  background: linear-gradient(135deg, rgba(16, 28, 48, 0.8) 0%, rgba(5, 12, 24, 0.95) 100%);
+  border: 1px solid rgba(0, 245, 255, 0.25);
+  border-radius: 32px;
+  overflow: hidden;
+  padding: 3rem;
+  margin: 3.5rem 0;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 3rem;
+  align-items: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+
+.healthcare-preview-frame {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+}
+
+.healthcare-preview-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.healthcare-preview-frame:hover .healthcare-preview-img {
+  transform: scale(1.04);
+}
+
+.healthcare-spotlight-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.85rem;
+  font-weight: 800;
+  color: #fff;
+  margin-bottom: 0.8rem;
+  line-height: 1.25;
+}
+
+.healthcare-label {
+  display: inline-block;
+  padding: 0.35rem 0.9rem;
+  border-radius: 100px;
+  background: rgba(0, 245, 255, 0.12);
+  border: 1px solid var(--accent);
+  color: var(--accent);
+  font-size: 0.78rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  letter-spacing: 0.5px;
+}
+
+.healthcare-pillars {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.25rem;
+  margin: 1.75rem 0;
+}
+
+.pillar-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 1rem;
+}
+
+.pillar-item h5 {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.3rem;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.pillar-item p {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  margin: 0;
+}
+
+/* ================= ACCESSIBLE LIGHTBOX MODAL ================= */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(3, 5, 12, 0.88);
+  backdrop-filter: blur(20px);
+  z-index: 10000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.lightbox-container {
+  background: var(--bg-card);
+  border: 1px solid var(--glass-border);
+  border-radius: 28px;
+  max-width: 960px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.8);
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  animation: lightboxPop 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes lightboxPop {
+  from {
+    transform: scale(0.94);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.lightbox-img-pane {
+  background: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 28px 0 0 28px;
+  overflow: hidden;
+  min-height: 400px;
+}
+
+.lightbox-img-pane img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.lightbox-info-pane {
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.lightbox-close-btn {
+  position: absolute;
+  top: 1.25rem;
+  right: 1.25rem;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid var(--glass-border);
+  color: #fff;
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 10;
+}
+
+.lightbox-close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
+}
+
+@media (max-width: 900px) {
+  .healthcare-spotlight {
+    grid-template-columns: 1fr;
+    padding: 2rem;
+  }
+  .lightbox-container {
+    grid-template-columns: 1fr;
+    max-height: 85vh;
+  }
+  .lightbox-img-pane {
+    border-radius: 28px 28px 0 0;
+    max-height: 350px;
+  }
+}
+

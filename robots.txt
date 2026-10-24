@@ -1,4 +1,6 @@
+# Sagar Gupta Portfolio - Search Engine Crawling Directives
 User-agent: *
 Allow: /
 
+# Canonical Sitemap URL
 Sitemap: https://sagargupta.dev/sitemap.xml

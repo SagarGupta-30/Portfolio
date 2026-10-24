@@ -115,10 +115,11 @@ document.addEventListener('DOMContentLoaded', () => {
   /* ================= 4. TYPING ROLE ANIMATION ================= */
   const roleTextEl = document.getElementById('typing-role');
   const roles = [
-    'Java Backend Developer',
-    'Spring Boot Architect',
-    'Open Source Contributor',
-    'Google Student Ambassador 2026'
+    'Visual & Graphic Designer',
+    'Brand & Content Creator',
+    'UI & Digital Asset Designer',
+    'Healthcare Visual Communicator',
+    'Developer-Minded Designer'
   ];
 
   let roleIndex = 0;
@@ -207,6 +208,93 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       });
     });
+  });
+
+  /* ================= 6B. DESIGN GALLERY FILTERING & LIGHTBOX ================= */
+  const galleryTabs = document.querySelectorAll('.gallery-tab');
+  const galleryItems = document.querySelectorAll('.gallery-item');
+
+  galleryTabs.forEach((tab) => {
+    tab.addEventListener('click', () => {
+      galleryTabs.forEach((t) => t.classList.remove('active'));
+      tab.classList.add('active');
+
+      const filter = tab.getAttribute('data-filter');
+
+      galleryItems.forEach((item) => {
+        const category = item.getAttribute('data-category');
+        if (filter === 'all' || category === filter) {
+          item.style.display = 'flex';
+          setTimeout(() => {
+            item.style.opacity = '1';
+            item.style.transform = 'translateY(0) scale(1)';
+          }, 30);
+        } else {
+          item.style.opacity = '0';
+          item.style.transform = 'translateY(10px) scale(0.96)';
+          setTimeout(() => {
+            item.style.display = 'none';
+          }, 250);
+        }
+      });
+    });
+  });
+
+  // Lightbox Modal Logic
+  const lightboxModal = document.getElementById('lightbox-modal');
+  const lightboxImg = document.getElementById('lightbox-img');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxCategory = document.getElementById('lightbox-category');
+  const lightboxDesc = document.getElementById('lightbox-desc');
+  const lightboxNotes = document.getElementById('lightbox-notes');
+  const lightboxClose = document.getElementById('lightbox-close');
+
+  function openLightbox(item) {
+    if (!lightboxModal) return;
+    const img = item.querySelector('.gallery-img') || item.querySelector('.healthcare-preview-img');
+    const title = item.getAttribute('data-title') || item.querySelector('.gallery-title')?.textContent;
+    const cat = item.getAttribute('data-category-label') || item.querySelector('.gallery-category')?.textContent;
+    const desc = item.getAttribute('data-desc') || item.querySelector('.gallery-desc')?.textContent;
+    const notes = item.getAttribute('data-notes') || '';
+
+    if (lightboxImg && img) lightboxImg.src = img.src;
+    if (lightboxTitle) lightboxTitle.textContent = title || '';
+    if (lightboxCategory) lightboxCategory.textContent = cat || '';
+    if (lightboxDesc) lightboxDesc.textContent = desc || '';
+    if (lightboxNotes) lightboxNotes.textContent = notes;
+
+    lightboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeLightbox() {
+    if (!lightboxModal) return;
+    lightboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  document.querySelectorAll('.gallery-expand-btn, .gallery-img-wrapper, .gallery-view-btn, .healthcare-preview-frame').forEach((el) => {
+    el.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const item = el.closest('.gallery-item') || el.closest('.healthcare-spotlight');
+      if (item) openLightbox(item);
+    });
+  });
+
+  if (lightboxClose) {
+    lightboxClose.addEventListener('click', closeLightbox);
+  }
+
+  if (lightboxModal) {
+    lightboxModal.addEventListener('click', (e) => {
+      if (e.target === lightboxModal) closeLightbox();
+    });
+  }
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('active')) {
+      closeLightbox();
+    }
   });
 
   /* ================= 7. GSAP SCROLL TRIGGER REVEALS ================= */
@@ -326,21 +414,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const avatarEl = document.getElementById('gh-avatar');
         const reposCountEl = document.getElementById('gh-repos-count');
         const followersCountEl = document.getElementById('gh-followers-count');
+        const commitsStat = document.getElementById('gh-commits-stat');
 
         if (avatarEl && userData.avatar_url) avatarEl.src = userData.avatar_url;
-        if (reposCountEl) reposCountEl.textContent = userData.public_repos || '24';
-        if (followersCountEl) followersCountEl.textContent = userData.followers || '150+';
+        if (reposCountEl) reposCountEl.textContent = userData.public_repos || '—';
+        if (followersCountEl) followersCountEl.textContent = userData.followers || '—';
+        if (commitsStat) commitsStat.textContent = userData.public_repos || '—';
       }
 
-      // Fetch Repositories
+      // Fetch Repositories (only non-forks for showcase)
       const reposRes = await fetch(reposUrl);
       const reposGrid = document.getElementById('github-repos-grid');
 
       if (reposRes.ok && reposGrid) {
         const reposData = await reposRes.json();
-        if (reposData.length > 0) {
+        // Filter to show non-forked repos first, limit to 6
+        const showcaseRepos = reposData
+          .sort((a, b) => (a.fork === b.fork ? 0 : a.fork ? 1 : -1))
+          .slice(0, 6);
+
+        if (showcaseRepos.length > 0) {
           reposGrid.innerHTML = '';
-          reposData.forEach((repo) => {
+          showcaseRepos.forEach((repo) => {
             const card = document.createElement('div');
             card.className = 'repo-card';
             card.innerHTML = `
@@ -348,9 +443,9 @@ document.addEventListener('DOMContentLoaded', () => {
                 <a href="${repo.html_url}" target="_blank" rel="noopener" class="repo-name">
                   <i class="ri-git-repository-line"></i> ${repo.name}
                 </a>
-                <span class="tech-tag">${repo.language || 'Java'}</span>
+                <span class="tech-tag">${repo.language || 'Code'}</span>
               </div>
-              <p class="repo-desc">${repo.description || 'High-performance open-source repository & backend implementation.'}</p>
+              <p class="repo-desc">${repo.description || 'Open-source project repository.'}</p>
               <div class="repo-footer">
                 <span><i class="ri-star-line"></i> ${repo.stargazers_count}</span>
                 <span><i class="ri-git-fork-line"></i> ${repo.forks_count}</span>
@@ -361,7 +456,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       }
     } catch (err) {
-      console.log('GitHub API offline or rate limited, using cached presentation data.');
+      console.log('GitHub API unavailable, showing fallback data.');
     }
   }
 
